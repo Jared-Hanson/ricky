@@ -1,8 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import Browse from '../views/Browse.vue'
-import Cart from '../views/Cart.vue'
+import Random from '../views/Randomizer.vue'
+import Favorite from '../views/Favorite.vue'
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -12,14 +13,14 @@ const routes = [
     component: Home
   },
   {
-  path: '/browse',
-  name: 'Browse',
-  component: Browse
+  path: '/randomizer',
+  name: 'Random',
+  component: Random
 },
 {
-path: '/cart',
-name: 'Cart',
-component: Cart
+path: '/favorite',
+name: 'Favorite',
+component: Favorite
 },
   {
     path: "/about",

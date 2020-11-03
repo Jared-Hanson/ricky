@@ -1,10 +1,15 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
-import mock from './mock-data.js'
+import pokedex from './pokedex.js'
+import Embed from 'v-video-embed'
+
+// global register
+Vue.use(Embed);
+
 
 let data = {
-  products: mock,
+  pokemon: pokedex,
   cart: [],
   textVal: "You dont have any items selected"
 }

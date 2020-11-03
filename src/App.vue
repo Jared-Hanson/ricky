@@ -7,21 +7,24 @@
       </router-link>
     </div>
     <div id="side">
-      <router-link to="/browse">
-        <div class="menu-item browse">
-          <img src="/images/globe.png">
-          <p>Browse</p>
+      <router-link to="/randomizer">
+        <div class="menu-item randomizer">
+          <img src="/images/36601.png">
+          <p>Random</p>
         </div>
       </router-link>
-      <router-link to="/cart">
+      <router-link to="/favorite">
         <div class="menu-item">
-          <img src="/images/love.png">
-          <p>{{this.$root.$data.cart.length}} items</p>
+          <img src="/images/star.png">
+          <p>Favorites</p>
         </div>
       </router-link>
     </div>
   </div>
   <router-view />
+  <v-footer>
+  <a href="https://github.com/Jared-Hanson/ricky">Github</a>
+  </v-footer>
 </div>
 </template>
 
@@ -76,7 +79,7 @@ body {
   margin: 0px;
 }
 
-.browse {
+.randomizer {
   margin-right: 50px;
 }
 </style>

@@ -1,22 +1,27 @@
 <template>
 <div>
+<p class="titleText">The most ADVANCED cs-260 pokedex yet! </p>
   <div class="wrapper">
+
     <div class="search">
       <form class="pure-form">
         <i class="fas fa-search"></i><input v-model="searchText" />
       </form>
     </div>
   </div>
-  <ProductList :products="products" />
+  <div class="pokemon">
+  <Pokelist :pokemon="pokemon" />
+  </div>
+  
 </div>
 </template>
 
 <script>
-import ProductList from "../components/ProductList.vue"
+import Pokelist from "../components/Pokelist.vue"
 export default {
   name: 'Home',
   components: {
-    ProductList
+    Pokelist
   },
   data() {
     return {
@@ -24,8 +29,8 @@ export default {
     }
   },
   computed: {
-    products() {
-      return this.$root.$data.products.filter(product => product.name.toLowerCase().search(this.searchText) >= 0);
+    pokemon() {
+      return this.$root.$data.pokemon.filter(poke => poke.name.english.toLowerCase().search(this.searchText) >= 0);
     }
   },
 }
@@ -36,6 +41,14 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.titleText{
+  text-align: center;
+}
+.pokemon {
+  display: flex;
+  align-items: left;
+  justify-content: left;
 }
 
 .search {
